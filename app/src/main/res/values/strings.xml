@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">FireBaseAuth</string>
-    <string name="firebase_web_client_id">"614955753845-h4tgem5jdu103krbhl1ugo5cfn4j9u95.apps.googleusercontent.com"</string>
-    <string name="facebook_app_id">748920916254671</string>
-    <string name="fb_login_protocol_scheme">fb748920916254671</string>
-    <string name="facebook_client_token">bf53b3ba4d4cf456b6bc4764169386a4</string>
+    <string name="firebase_web_client_id">"your client id"</string>
+    <string name="facebook_app_id">your app id</string>
+    <string name="fb_login_protocol_scheme">fb_your_app_id</string>
+    <string name="facebook_client_token">your token</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
