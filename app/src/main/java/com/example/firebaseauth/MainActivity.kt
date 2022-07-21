@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var callbackManager : CallbackManager //콜백 전역변수
     // [START declare_auth]
     private lateinit var auth: FirebaseAuth
+    private lateinit var currentUser : auth?.currentUser
     // [END declare_auth]
     private lateinit var mAuthListener : FirebaseAuth.AuthStateListener
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,6 +42,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         auth = Firebase.auth
+        auth = Firebase.getInstance()
         // [START config_signin]
         // Configure Google Sign In
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -59,7 +61,7 @@ class MainActivity : AppCompatActivity() {
         }
         // [END signin]
 
-        //일반이메일 로그인
+        //일반이메일 로그인(normal email login)
         editTextEmail = findViewById(R.id.editTextTextEmailAddress)
         editTextPassword = findViewById(R.id.editTextTextPassword)
 
@@ -71,7 +73,7 @@ class MainActivity : AppCompatActivity() {
 
         // Initialize Facebook Login button
         callbackManager = CallbackManager.Factory.create()
-        //페이스북로그인
+        //페이스북로그인(facebook login)
         facebook_login_button.setReadPermissions("email", "public_profile")
         facebook_login_button.registerCallback(callbackManager, object :
             FacebookCallback<LoginResult> {
@@ -89,8 +91,8 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        //리스너너
-
+        //리스너(listener)
+        
         mAuthListener = FirebaseAuth.AuthStateListener (object : FirebaseAuth.AuthStateListener, (FirebaseAuth) -> Unit {
             override fun onAuthStateChanged(p0: FirebaseAuth) {
                 var user = p0.currentUser
@@ -103,6 +105,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun invoke(p1: FirebaseAuth) {
+            //자주 호출해야하는 함수를 객체+이름()으로 호출가능
                 TODO("Not yet implemented")
             }
         })/*{
