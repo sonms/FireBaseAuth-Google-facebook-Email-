@@ -22,12 +22,12 @@
             android:title="Logout"/>
     </group>
 
-    <item android:title="preforence">
+    <!--<item android:title="preforence">
         <menu>
             <item
                 android:id="@+id/nav_logout"
                 android:icon="@android:drawable/sym_action_email"
                 android:title="Logout"/>
         </menu>
-    </item>
+    </item>-->
 </menu>
