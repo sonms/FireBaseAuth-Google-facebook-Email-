@@ -59,6 +59,37 @@ class HomeActivity : AppCompatActivity() {
         menuInflater.inflate(R.menu.home, menu)
         return true
     }
+    
+    // 드로어 내 아이템 클릭 이벤트 처리하는 함수
+    override fun onNavigationItemSelected(item : MenuItem): Boolean {
+
+        when (val id = item.itemId) {
+            R.id.nav_home -> {
+    
+            }
+            R.id.nav_gallery -> {
+                Toast.makeText(baseContext, "$id",
+                    Toast.LENGTH_SHORT).show()
+                val intent = Intent(Intent.ACTION_GET_CONTENT)
+                //intent.setAction(MediaStore.Images.Media.CONTENT_TYPE)
+                intent.action = MediaStore.Images.Media.CONTENT_TYPE
+                startActivityForResult(intent,GALLERY_CODE)
+            }
+            R.id.nav_logout -> {
+                auth.signOut()
+                LoginManager.getInstance().logOut()
+                finish()
+                val intent = Intent(this, MainActivity::class.java) //원하는 클래스로 데이터 받기
+                startActivity(intent)
+    
+            }
+        }
+        // 화면 한쪽에 숨겨져 있다가 사용자가 액션을 취하면 화면에 나타나는 기능을 만들 수 있게 해주는 레이아웃
+        val drawer = DrawerLayout(findViewById(R.id.drawer_layout))
+        //drawer 닫기
+        drawer.closeDrawer(GravityCompat.START)
+        return true
+    }
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_home)
