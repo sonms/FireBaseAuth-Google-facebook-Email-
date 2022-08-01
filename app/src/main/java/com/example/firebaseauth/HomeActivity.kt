@@ -60,6 +60,18 @@ class HomeActivity : AppCompatActivity() {
         return true
     }
     
+    //툴바 메뉴 버튼이 클릭 됐을 떄 실행하는 함수
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // 클릭한 툴바 메뉴 아이템 id 마다 다르게 실행하도록 설정
+        when(item!!.itemId) {
+            android.R.id.home-> {
+                //버튼 클릭시 네비게이션 드로어 열기
+                drawer_layout.openDrawer(GravityCompat.START)
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+    
     // 드로어 내 아이템 클릭 이벤트 처리하는 함수
     override fun onNavigationItemSelected(item : MenuItem): Boolean {
 
