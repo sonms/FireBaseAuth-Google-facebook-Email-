@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">FireBaseAuth</string>
-    <string name="firebase_web_client_id">"your client id"</string>
-    <string name="facebook_app_id">your app id</string>
+    <string name="firebase_web_client_id">"your_client_id"</string>
+    <string name="facebook_app_id">your_app_id</string>
     <string name="fb_login_protocol_scheme">fb_your_app_id</string>
     <string name="facebook_client_token">your token</string>
     <string name="title_activity_home">HomeActivity</string>
