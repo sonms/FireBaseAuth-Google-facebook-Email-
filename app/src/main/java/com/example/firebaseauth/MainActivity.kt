@@ -205,11 +205,11 @@ class MainActivity : AppCompatActivity() {
                 }
             }
     }
-    fun mainpage(user: FirebaseUser?) {
+    /*fun mainpage(user: FirebaseUser?) {
         if (user != null) {
             startActivity(Intent(this, HomeActivity::class.java))
         }
-    }
+    }*/
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
