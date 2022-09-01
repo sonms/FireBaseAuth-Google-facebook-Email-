@@ -193,6 +193,7 @@ class MainActivity : AppCompatActivity() {
                     //여기서 다음 화면으로 넘어가는 코드를 넣을 시
                     //자동 로그인 기능, 다른 소셜 로그인 기능과 충돌할 수 있으니
                     //그런 코드 x
+                    
                     auth = FirebaseAuth.getInstance()
                     val user = auth.currentUser
                     updateUI(user)
@@ -205,11 +206,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
     }
-    /*fun mainpage(user: FirebaseUser?) {
-        if (user != null) {
-            startActivity(Intent(this, HomeActivity::class.java))
-        }
-    }*/
+    
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
