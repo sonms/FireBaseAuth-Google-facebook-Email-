@@ -91,8 +91,7 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        //리스너(listener)
-        
+       
         mAuthListener = FirebaseAuth.AuthStateListener (object : FirebaseAuth.AuthStateListener, (FirebaseAuth) -> Unit {
             override fun onAuthStateChanged(p0: FirebaseAuth) {
                 var user = p0.currentUser
