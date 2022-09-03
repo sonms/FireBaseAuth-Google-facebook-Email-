@@ -90,14 +90,6 @@ class MainActivity : AppCompatActivity() {
                 Log.d(TAG, "facebook:onError", error)
             }
         })
-
-     {
-                    val intent = Intent(this, HomeActivity::class.java) //원하는 클래스로 데이터 받기
-                    startActivity(intent)
-                } else {
-
-                }
-        }*/
 }
 
     public override fun onStart() {
