@@ -91,17 +91,7 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-       
-     
-            }
-
-            override fun invoke(p1: FirebaseAuth) {
-            //자주 호출해야하는 함수를 객체+이름()으로 호출가능
-               
-            }
-        })/*{
-                val user = it.currentUser
-                if (user != null) {
+     {
                     val intent = Intent(this, HomeActivity::class.java) //원하는 클래스로 데이터 받기
                     startActivity(intent)
                 } else {
