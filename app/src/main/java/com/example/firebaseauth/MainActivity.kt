@@ -92,8 +92,7 @@ class MainActivity : AppCompatActivity() {
         })
 
        
-       = FirebaseAuth.AuthStateListener (object : FirebaseAuth.AuthStateListener, (FirebaseAuth) -> Unit {
-            override fun onAuthStateChanged(p0: FirebaseAuth) {
+     (p0: FirebaseAuth) {
                 var user = p0.currentUser
                 if (user != null) {
                     val intent = Intent(this@MainActivity, HomeActivity::class.java) //원하는 클래스로 데이터 받기
