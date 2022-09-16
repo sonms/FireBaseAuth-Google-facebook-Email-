@@ -91,20 +91,8 @@ class MainActivity : AppCompatActivity() {
             }
         })
 }
-    /*
-    public override fun onStart() {
-        super.onStart()
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseAuth.getInstance().addAuthStateListener{mAuthListener}
-    }
-
-    public override fun onStop() {
-        super.onStop()
-        if (mAuthListener != null) {
-            FirebaseAuth.getInstance().removeAuthStateListener{mAuthListener}
-        }
-    }
-    */
+    
+    
     //facabook 엑세스 토큰받기
     private fun handleFacebookAccessToken(token: AccessToken) {
         Log.d(TAG, "handleFacebookAccessToken:$token")
