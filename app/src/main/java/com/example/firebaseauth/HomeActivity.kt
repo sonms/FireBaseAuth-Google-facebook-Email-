@@ -45,12 +45,7 @@ class HomeActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-        /*val view : View = navView.getHeaderView(0)
-        val nameTextView = TextView(view.findViewById(R.id.user_name1))
-        val emailTextView = TextView(view.findViewById(R.id.user_email))
-
-        nameTextView.text = auth.currentUser!!.displayName
-        emailTextView.text = auth.currentUser!!.email*/
+        
     }
 
     @SuppressLint("ResourceType")
