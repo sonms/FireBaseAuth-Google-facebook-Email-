@@ -167,7 +167,7 @@ class MainActivity : AppCompatActivity() {
             }
     }
     
-    //구글 로그인 런처
+    //구글 로그인 런처 콜백
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
